@@ -1,7 +1,7 @@
 'use strict';
-var toString = Object.prototype.toString;
+const {toString} = Object.prototype;
 
-module.exports = function (fn) {
+module.exports = fn => {
 	if (typeof fn !== 'function') {
 		return false;
 	}

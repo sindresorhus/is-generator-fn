@@ -1,13 +1,13 @@
 import test from 'ava';
-import m from './';
+import isGeneratorFn from '.';
 
-test(t => {
-	t.true(m(function * () {}));
-	t.true(m(function * () {
+test('main', t => {
+	t.true(isGeneratorFn(function * () {}));
+	t.true(isGeneratorFn(function * () {
 		yield 'unicorn';
 	}));
-	t.false(m(null));
-	t.false(m(undefined));
-	t.false(m(() => {}));
-	t.false(m(''));
+	t.false(isGeneratorFn(null));
+	t.false(isGeneratorFn(undefined));
+	t.false(isGeneratorFn(() => {}));
+	t.false(isGeneratorFn(''));
 });
