@@ -9,3 +9,5 @@ module.exports = fn => {
 	return (fn.constructor && fn.constructor.name === 'GeneratorFunction') ||
 		toString.call(fn) === '[object GeneratorFunction]';
 };
+
+module.exports.default = module.exports;
