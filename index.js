@@ -1,13 +1,13 @@
 'use strict';
 const {toString} = Object.prototype;
 
-module.exports = fn => {
-	if (typeof fn !== 'function') {
+module.exports = value => {
+	if (typeof value !== 'function') {
 		return false;
 	}
 
-	return (fn.constructor && fn.constructor.name === 'GeneratorFunction') ||
-		toString.call(fn) === '[object GeneratorFunction]';
+	return (value.constructor && value.constructor.name === 'GeneratorFunction') ||
+		toString.call(value) === '[object GeneratorFunction]';
 };
 
 module.exports.default = module.exports;
