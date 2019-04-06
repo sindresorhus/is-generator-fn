@@ -10,4 +10,5 @@ module.exports = value => {
 		toString.call(value) === '[object GeneratorFunction]';
 };
 
+// TODO: Remove this for the next major release
 module.exports.default = module.exports;
