@@ -1,9 +1,9 @@
-import {expectType} from 'tsd-check';
-import isGeneratorFn from '.';
+import {expectType} from 'tsd';
+import isGeneratorFn = require('.');
 
-expectType<boolean>(isGeneratorFn(function * () {}));
+expectType<boolean>(isGeneratorFn(function * () {return '🦄'}));
 expectType<boolean>(isGeneratorFn(function * () {
-	yield 'unicorn';
+	yield '🦄';
 }));
 expectType<boolean>(isGeneratorFn(null));
 expectType<boolean>(isGeneratorFn(undefined));
