@@ -1,4 +1,4 @@
-# is-generator-fn [![Build Status](https://travis-ci.org/sindresorhus/is-generator-fn.svg?branch=master)](https://travis-ci.org/sindresorhus/is-generator-fn)
+# is-generator-fn
 
 > Check if something is a [generator function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 
