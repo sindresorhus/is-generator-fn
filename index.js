@@ -7,7 +7,9 @@ module.exports = value => {
 	}
 
 	return (value.constructor && value.constructor.name === 'GeneratorFunction') ||
-		toString.call(value) === '[object GeneratorFunction]';
+		toString.call(value) === '[object GeneratorFunction]' || 
+		(value.constructor && value.constructor.name === 'AsyncGeneratorFunction') ||
+		toString.call(value) === '[object AsyncGeneratorFunction]';
 };
 
 // TODO: Remove this for the next major release
