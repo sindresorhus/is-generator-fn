@@ -2,32 +2,24 @@
 
 > Check if something is a [generator function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 
-
 ## Install
 
 ```
 $ npm install is-generator-fn
 ```
 
-
 ## Usage
 
 ```js
-const isGeneratorFn = require('is-generator-fn');
+import isGeneratorFunction from 'is-generator-fn';
 
-isGeneratorFn(function * () {});
+isGeneratorFunction(function * () {});
 //=> true
 
-isGeneratorFn(function () {});
+isGeneratorFunction(function () {});
 //=> false
 ```
-
 
 ## Related
 
 - [is](https://github.com/sindresorhus/is) - Type check values
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

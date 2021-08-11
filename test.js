@@ -1,13 +1,13 @@
 import test from 'ava';
-import isGeneratorFn from '.';
+import isGeneratorFunction from './index.js';
 
 test('main', t => {
-	t.true(isGeneratorFn(function * () {}));
-	t.true(isGeneratorFn(function * () {
+	t.true(isGeneratorFunction(function * () {}));
+	t.true(isGeneratorFunction(function * () {
 		yield 'unicorn';
 	}));
-	t.false(isGeneratorFn(null));
-	t.false(isGeneratorFn(undefined));
-	t.false(isGeneratorFn(() => {}));
-	t.false(isGeneratorFn(''));
+	t.false(isGeneratorFunction(null));
+	t.false(isGeneratorFunction(undefined));
+	t.false(isGeneratorFunction(() => {}));
+	t.false(isGeneratorFunction(''));
 });

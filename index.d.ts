@@ -1,24 +1,15 @@
-declare const isGeneratorFn: {
-	/**
-	Check if something is a generator function.
+/**
+Check if something is a generator function.
 
-	@example
-	```
-	import isGeneratorFn = require('is-generator-fn');
+@example
+```
+import isGeneratorFunction from 'is-generator-fn';
 
-	isGeneratorFn(function * () {});
-	//=> true
+isGeneratorFunction(function * () {});
+//=> true
 
-	isGeneratorFn(function () {});
-	//=> false
-	```
-	*/
-	(value: unknown): value is GeneratorFunction;
-
-	// TODO: Remove this for the next major release, refactor the whole definition to:
-	// declare function isGeneratorFn(value: unknown): value is GeneratorFunction;
-	// export = isGeneratorFn;
-	default: typeof isGeneratorFn;
-};
-
-export = isGeneratorFn;
+isGeneratorFunction(function () {});
+//=> false
+```
+*/
+export default function isGeneratorFunction(value: unknown): value is GeneratorFunction;

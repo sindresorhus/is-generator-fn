@@ -1,11 +1,14 @@
 import {expectType} from 'tsd';
-import isGeneratorFn = require('.');
+import isGeneratorFunction from './index.js';
 
-expectType<boolean>(isGeneratorFn(function * () {return '🦄'}));
-expectType<boolean>(isGeneratorFn(function * () {
+// eslint-disable-next-line require-yield
+expectType<boolean>(isGeneratorFunction(function * () {
+	return '🦄';
+}));
+expectType<boolean>(isGeneratorFunction(function * () {
 	yield '🦄';
 }));
-expectType<boolean>(isGeneratorFn(null));
-expectType<boolean>(isGeneratorFn(undefined));
-expectType<boolean>(isGeneratorFn(() => {}));
-expectType<boolean>(isGeneratorFn(''));
+expectType<boolean>(isGeneratorFunction(null));
+expectType<boolean>(isGeneratorFunction(undefined));
+expectType<boolean>(isGeneratorFunction(() => {})); // eslint-disable-line @typescript-eslint/no-empty-function
+expectType<boolean>(isGeneratorFunction(''));
